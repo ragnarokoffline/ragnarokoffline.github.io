@@ -1,7 +1,8 @@
-# Ragnarok Offline Pre-Renewal 2025 Pack with OpenKore (Auto-bot) support
+<img src="media/main_banner.png">
+# Ragnarok Offline Pre-Renewal 2025 Pack with OpenKore (Auto-bot) Support
 Hi, I'm [wrywndp](https://www.youtube.com/@wrywndp).\
 This is a GitHub page for hosting a manual guide to ready-to-play Ragnarok Offline Pre-Renewal from my YouTube Channel.\
-This incluse on how to install, download links, troubleshooting, and custom changes.\
+This includes how to install, download links, troubleshoot, latest updates information, and custom changes.\
 This project is solely for testing and educational purposes.\
 Everything is free, and I'm not asking for any kind of donation or doing any monetization.\
 So, please be aware of anyone who would like to get your money from this project.
