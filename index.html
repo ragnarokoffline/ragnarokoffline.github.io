@@ -235,7 +235,7 @@
 	<main>
 		<header>
 			<h1>Ragnarok Offline Pre-Renewal 2025</h1>
-			<h2>Latest Update: <span>2025-04-21</span> <a href="#info" title="Server Info">[?]</a></h2>
+			<h2>Latest Update: <span>2025-04-23</span> <a href="#info" title="Server Info">[?]</a></h2>
 		</header>
 
 
@@ -279,6 +279,9 @@
 				<h2>How To Create New User</h2>
 				<p>1. Open your browser and go to <b><a target="_blank" href="https://localhost">https://localhost</a></b> (Make sure to run the <b>laragon.exe</b> first).</p>
 				<p>2. Go to <b>Register</b> (You can use fake email and also can use 1 e-mail for multiple account).</p>
+				<br>
+				<p><b>NOTE</b>: If you see a security warning when visiting <b><a target="_blank" href="https://localhost">https://localhost</a></b>, it means the Laragon SSL certificate hasn't been installed yet.</p>
+				<p>Right click <b>laragon</b> in system tray (Right bottom / notification area / taskbar status area) > <b>Apache</b> > <b>SSL</b> > <b>Add laragon.crt to Trust Store</b> (Also make sure SSL is Enabled). Then restart laragon.</p>
 			</div>
 			<div id="gmaccount">
 				<h2>GM Account</h2>
@@ -311,7 +314,7 @@
 							<th>Solutions</th>
 						</tr>
 						<tr>
-							<td rowspan="3">Ragnarok.exe won't run</td>
+							<td rowspan="6">Ragnarok.exe won't run, crash, stuck, graphic bug/glitch</td>
 							<td>Try to run <b>opensetup.exe</b> first, and change resolution in graphic setting section and use <b>DirectX 7</b> graphics API</td>
 						</tr>
 						<tr>
@@ -321,7 +324,6 @@
 							<td>Delete <b>savedata</b> folder inside <b>3_Client</b></td>
 						</tr>
 						<tr>
-							<td rowspan="3">Ragnarok.exe won't run, crash, stuck, graphic bug/glitch</td>
 							<td>If the client crash alot, or stuck at loading screen, the culpirt maybe from the high FPS from using dgVoodoo2 (I'm using dgVoodoo2 to make the client running at higher FPS and to increase maximum supported resolution.). You can force vsync using <b>dgVoodooCpl.exe</b> (<b>3_Client</b>) > DirectX > Force V-Sync. Look in the TOOLS folder in download link to get the screenshot of the default settings.</td>
 						</tr>
 						<tr>
@@ -368,8 +370,8 @@
 						</tr>
 						<tr>
 							<td>rAthena</td>
-							<td>2025-04-21</td>
-							<td><a target="_blank" href="https://github.com/rathena/rathena/tree/499d852c9f081be0074c3e1f7420096181698624">GitHub</a></td>
+							<td>2025-04-22</td>
+							<td><a target="_blank" href="https://github.com/rathena/rathena/tree/4a3a1cf2a36d37ed0495f40f0b4e072d047fe8a2">GitHub</a></td>
 							<td>
 								<ol>
 									<li>PACKETVER 20200401</li>
@@ -456,15 +458,22 @@
 							<td>The translation is from llchrisll, but I added some customization to suit this server.</td>
 						</tr>
 						<tr>
-							<td rowspan="3">OpenKore</td>
-							<td rowspan="3">2025-04-20</td>
-							<td rowspan="3"><a target="_blank" href="https://github.com/OpenKore/openkore/tree/83f00f04fa0328db22c37c7e07e7d078c8e99051">GitHub</a></td>
+							<td rowspan="4">OpenKore</td>
+							<td rowspan="4">2025-04-23</td>
+							<td rowspan="4"><a target="_blank" href="https://github.com/OpenKore/openkore/tree/8f52ca288fb5e93d00ae0a2728421cee3824379a">GitHub</a></td>
 							<td>
 								<ol>
 									<li>This program is used for Botting/Auto-Farm.</li>
-									<li>Watch my <a href="https://youtu.be/_oB-yqEWb5E">How to Bot in Ragnarok Offline - Basic Guide</a> video.</li>
-									<li>Also watch my <a href="https://youtu.be/W9ZEXUXlk80">OpenKore Manager</a> video, if you want to manage multiple bots easily.</li>
+									<li>Watch my <a target="_blank" href="https://youtu.be/_oB-yqEWb5E">How to Bot in Ragnarok Offline - Basic Guide</a> video.</li>
+									<li>Also watch my <a target="_blank" href="https://youtu.be/W9ZEXUXlk80">OpenKore Manager</a> video, if you want to manage multiple bots easily.</li>
 									<li>For more information on how to use OpenKore, please read <a target="_blank" href="https://openkore.com/wiki/Main_Page">OpenKore Documentation</a>.</li>
+								</ol>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<ol>
+									<li>This is modified OpenKore including a default setting that suppress certain in-game events. This behavior can be reverted by removing the <b>squelchDomains</b> value in config.txt. Read <a target="_blank" href="https://openkore.com/wiki/squelchDomains">squelchDomains</a> for more information.</li>
 								</ol>
 							</td>
 						</tr>
@@ -519,7 +528,7 @@
 						</tr>
 						<tr>
 							<td>NGINX</td>
-							<td>1.27.4</td>
+							<td>1.27.5</td>
 							<td><a target="_blank" href="https://nginx.org/en/download.html">NGINX</a></td>
 						</tr>
 					</tbody>
