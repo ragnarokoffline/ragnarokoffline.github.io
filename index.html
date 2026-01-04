@@ -267,7 +267,7 @@
 				<p>2. Create a folder named <b>RO_PreRenewal</b>. You may choose your own folder name, but avoid using spaces in the folder path. (Recommended folder locations: <i>C:\RO_PreRenewal\</i>, <i>D:\RO_PreRenewal\</i>, <i>D:\PCGAMES\RO_PreRenewal\</i>, etc.). Refer to <b>SCREENSHOT.png</b> for guidance.</p>
 				<p>3. Extract the files (<b>1_Database.7z</b>, <b>2_Server.7z</b>, <b>3_Client.7z</b>) and place them inside the <b>RO_PreRenewal</b> folder. If you wish to use OpenKore, also extract <b>4_OpenKore.7z</b> into the same folder.</p>
 				<p>4. Copy the three GRF files (<b>data.grf</b>, <b>prerenewal.grf</b>, <b>rdata.grf</b>) from the <b>CLIENT_GRF</b> folder into the <b>3_Client</b> folder.</p>
-				<p>5. Copy the <b>BGM</b> folder (choose between <b>LQ_BGM.7z</b> (default) and <b>HQ_BGM.7z</b>) into the <b>3_Client</b> folder. <b>NOTE:</b> The high-quality version only includes the pre-renewal tracks; all renewal tracks remain in low quality.</p>
+				<p>5. Copy the <b>BGM</b> folder (choose between <b>LQ_BGM.7z</b> (Original) and <b>HQ_BGM.7z</b>) into the <b>3_Client</b> folder. <b>NOTE:</b> The high-quality version only includes the pre-renewal tracks; all renewal tracks remain in low quality.</p>
 				<p><b>NOTE:</b> The Prontera Town HQ BGM may have a playback issue at the beginning when played in the game, though it works fine in a music player. To resolve this, I’ve also uploaded a mono version of the BGM, <b>08.mp3</b>.</p>
 				<p>6. Run <b>laragon.exe</b> from the <b>1_Database</b> folder. Laragon will run in the system tray. (If a firewall prompt appears, select <b>Yes</b>.)</p>
 				<p>7. Run <b>runserver.bat</b> from the <b>2_Server</b> folder. This will open four CMD windows: <b>logserv.bat</b>, <b>charserv.bat</b>, <b>webserv.bat</b>, and <b>mapserv.bat</b>. (If a firewall prompt appears, select <b>Yes</b>.)</p>
@@ -576,16 +576,12 @@
 							</td>
 						</tr>
 						<tr>
-							<td>Changed God items quest seal progression (open and close) conditions from 50/100 to 1/10.</td>
-							<td>npc\quests\seals\god_global.txt</td>
-						</tr>
-						<tr>
 							<td rowspan="2">Enable Brasilis (Town, Quest, NPC, Mob, etc.)</td>
-							<td>npc\pre-re\scripts_athena.conf</td>
+							<td>npc\scripts_custom.conf</td>
 						</tr>
 						<tr><td>db\import\mob_summon.yml</td></tr>
 						<tr>
-							<td rowspan="6">
+							<td rowspan="4">
 								<ol>
 									<li>Enable and repopulate old Sograt deserts with monsters (Pre-Satan Morroc)</li>
 									<li><b>Map List:</b></li>
@@ -599,16 +595,14 @@
 									<li>- moc_fild15</li>
 									<li><b>NOTE:</b></li>
 									<li>- The Satan Morroc quest remains active, but all warps to moc_fild20 are disabled and replaced with the original portal (pre-Satan Morroc). You can use the Warper for alternative access</li>
-									<li>- The Anthell warp portal in the old version of Sograt deserts remains disabled. Use the new portal in cmd_fild08 instead</li>
+									<li>- The Anthell warp portal in the old version of Sograt deserts remains disabled. Use the new portal in cmd_fild08 instead.</li>
 								</ol>
 							</td>
 							<td>conf\import\map_conf.txt</td>
 						</tr>
-						<tr><td>npc\pre-re\mobs\fields\morocc.txt</td></tr>
-						<tr><td>npc\warps\cities\morroc.txt</td></tr>
-						<tr><td>npc\pre-re\warps\fields\morroc_fild.txt</td></tr>
-						<tr><td>npc\pre-re\warps\fields\prontera_fild.txt</td></tr>
-						<tr><td>npc\mapflag\night.txt</td></tr>
+						<tr><td>npc\custom\aegis\mobs.txt</td></tr>
+						<tr><td>npc\custom\aegis\warppoints.txt</td></tr>
+						<tr><td>npc\custom\aegis\night.txt</td></tr>
 					</tbody>
 				</table>
 			</div>
@@ -768,11 +762,13 @@
 				<h2>Extra Notes</h2>
 				<div class="listinfo">
 					<ol>
+						<li>- To keep the server organized, I've documented all modified folders and files here.</li>
 						<li>- <b style="color: red;">DO NOT TOUCH THESE FILES/FOLDERS UNLESS YOU KNOW WHAT YOU ARE DOING.</b></li>
 						<li>- This section is for <b>2_Server</b> folder.</li>
 						<li>- These files/folders have been edited to suit this server needs.</li>
-						<li>- You can use Visual Studio Code to compare between the default rAthena files with these files listed below to know the difference.</li>
-						<li>- <b>ALWAYS</b> using import folder (In <b>conf</b> & <b>db</b> folder) first when editing.</li>
+						<li>- You can use Visual Studio Code to compare between the original rAthena files with these files listed below to know the difference.</li>
+						<li>- <b>AVOID</b> editing core files directly. Use the import folders in <b>conf</b> and <b>db</b> to override settings.</li>
+						<li>&nbsp; This keeps your modifications organized and prevents merge conflicts during updates.</li>
 						<li>- If you edit the source, you need to recompile the server to make the changes you've made take effect.</li>
 					</ol>
 				</div>
@@ -802,29 +798,11 @@
 						</tr>
 						<tr><td>npc\custom\aegis\</td></tr>
 						<tr>
-							<td>Changed God items quest seal progression</td>
-							<td>
-								<ol>
-									<li>npc\quests\seals\god_global.txt</li>
-								</ol>
-							</td>
+							<td rowspan="3">Enable Old Sograt Desert (Pre-Satan Morroc)</td>
+							<td>npc\custom\aegis\mobs.txt</td>
 						</tr>
-						<tr>
-							<td>Enable Brasilis</td>
-							<td>
-								<ol>
-									<li>npc\pre-re\scripts_athena.conf</li>
-								</ol>
-							</td>
-						</tr>
-						<tr>
-							<td rowspan="5">Enable Old Sograt Fields (Pre-Satan Morroc)</td>
-							<td>npc\pre-re\mobs\fields\morocc.txt</td>
-						</tr>
-						<tr><td>npc\pre-re\warps\fields\morroc_fild.txt</td></tr>
-						<tr><td>npc\pre-re\warps\fields\prontera_fild.txt</td></tr>
-						<tr><td>npc\warps\cities\morroc.txt</td></tr>
-						<tr><td>npc\mapflag\night.txt</td></tr>
+						<tr><td>npc\custom\aegis\warppoints.txt</td></tr>
+						<tr><td>npc\custom\aegis\night.txt</td></tr>
 						<tr>
 							<td rowspan="2">FluxCP database</td>
 							<td>sql-files\</td>
