@@ -20,7 +20,7 @@ This is the minimum and recommended spec required to run Laragon 6.0.0 (PHP, Apa
 | RAM | 8GB | 8GB |
 | GPU | DirectX 7 | DirectX 7 |
 | VRAM | 512MB | 1GB |
-| Disk Space | 7GB | 7GB |
+| Disk Space | 5GB | 5GB |
 | OS | Windows 10 x64 | Windows 11 x64 <sup>[1]</sup> |
 
 <sup>[1]</sup> I created and am still maintaining this pack using Windows 11 25H2. So, I CAN NOT guarantee this pack will run without a problem on an older system (Especially older than Windows 10).
