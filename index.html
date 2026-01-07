@@ -47,7 +47,7 @@
 		body {
 			min-height: 100vh;
 			text-rendering: optimizeSpeed;
-			line-height: 1.5;
+			line-height: 2;
 		}
 
 		a {
@@ -116,13 +116,13 @@
 		header {
 			color: #f0f0f0;
 			margin: 0 auto;
-			max-width: 1280px;
+			max-width: 960px;
 			padding: 2rem 1rem;
 			text-align: center;
 		}
 
 		header h1 {
-			font-size: 3rem;
+			font-size: 2.75rem;
 			padding: 1rem 0 .5rem;
 		}
 
@@ -141,34 +141,74 @@
 		iframe {
 			aspect-ratio: 16 / 9;
 			width: 100%;
-			margin-top: 1rem;
 		}
 
 		.content {
 			background-color: #f0f0f0;
-			background-image: repeating-linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%, #fff),repeating-linear-gradient(45deg, #fff 25%, #f0f0f0 25%, #f0f0f0 75%, #fff 75%, #fff);
 			background-position: 0 0,2px 2px;
 			background-size: 4px 4px;
 			border-radius: .25rem;
 			filter: drop-shadow(4px 4px 4px #0f0f0f);
 			margin: 0 auto 5rem;
-			max-width: 1280px;
+			max-width: 960px;
 			padding: 1.5rem;
 		}
 
 		.content h2 {
-			background-color: #202020;
+			background: rgb(255,85,0);
 			color: #f0f0f0;
+			font-size: 2.25rem;
+			margin-bottom: 2rem;
+			padding: 1.5rem 1rem;
+			text-align: center;
+		}
+
+		.content h3 {
+			background-color: #0893d3;
+			color: #f0f0f0;
+			font-size: 1.5rem;
 			padding: 1rem;
 			text-align: center;
 		}
 
-		.content h2.maintitle {
-			background: rgb(255,85,0);
-			background: radial-gradient(circle, rgba(255,85,0,1) 0%, rgba(255,180,0,1) 100%);
-			font-size: 2.5rem;
-			margin-bottom: 2rem;
-			padding: 3rem 1rem;
+		.content h4 {
+			background-color: #202020;
+			border-left: .25rem solid #1884dd;
+			color: #f0f0f0;
+			font-size: 1.125rem;
+			margin-top: 2rem;
+			padding: .5rem 1rem;
+		}
+
+		.content aside {
+			border-radius: .5rem;
+			color: #f0f0f0;
+			font-weight: bold;
+			line-height: 2;
+			margin: .5rem 0 1rem;
+			padding: .75rem;
+			text-align: center;
+		}
+
+		aside.orange {
+			background-color: #da600e;
+		}
+
+		aside.red {
+			background-color: #ff0000;
+		}
+
+		ol.file-list {
+			line-height: 2.5;
+			padding: 1rem;
+		}
+
+		code {
+			background-color: #5467e6;
+			border-radius: 3px;
+			color: #f0f0f0;
+			font-family: "Courier New", Courier, monospace;
+			padding: .25rem .375rem .125rem;
 		}
 
 		#installation,
@@ -246,12 +286,16 @@
 		<div class="content">
 			<h2 class="maintitle">How to Play</h2>
 			<div id="installation">
-				<h2>Installation</h2>
 				<iframe src="https://www.youtube.com/embed/aN5OCJdj2qA?si=x3_4VKqcIzykvELW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-				<p>1. Download <b>1_Database.7z</b>, <b>2_Server.7z</b>, <b>3_Client.7z</b>, and all the necessary GRF files (<b>data.grf</b>, <b>prerenewal.grf</b>, and <b>rdata.grf</b>) found in <b>CLIENT_GRF</b> (Select only one download link). Repack size: 5GB, Original size: 7GB. For the background music (BGM), choose either <b>LQ_BGM.7z</b> or <b>HQ_BGM.7z</b>.</p>
-				<p><b>OPTIONAL:</b> If you plan to use OpenKore for botting, you can also download <b>4_OpenKore.7z</b>.</p>
-				<p><b>OPTIONAL 2:</b> <b>flatmap.grf</b> is an optional GRF if you want to simple maps.</p>
-				<p><b>IMPORTANT:</b> Download each file individually. DO NOT download the entire folder as a single zip file.</p>
+				<h3>Installation</h3>
+				<h4>1. Download Requirements</h4>
+				<ol class="file-list">
+					<li><strong>Core Files:</strong> <code>1_Database.7z</code>, <code>2_Server.7z</code>, and <code>3_Client.7z</code>.</li>
+					<li><strong>GRF Files:</strong> <code>data.grf</code>, <code>prerenewal.grf</code>, and <code>rdata.grf</code> (found in <code>CLIENT_GRF</code>).</li>
+					<li><strong>Audio:</strong> Choose <code>LQ_BGM.7z</code> (Standard) or <code>HQ_BGM.7z</code> (High Quality).</li>
+					<li><strong>Optional:</strong> <code>4_OpenKore.7z</code> (for botting) and <code>flatmap.grf</code> (simplified maps).</li>
+				</ol>
+				<aside class="red">Download the following files individually. Do not download the entire folder as a single ZIP.</aside>
 				<table>
 					<tbody>
 						<tr>
@@ -264,20 +308,30 @@
 						</tr>
 					</tbody>
 				</table>
-				<p>2. Create a folder named <b>RO_PreRenewal</b>. You may choose your own folder name, but avoid using spaces in the folder path. (Recommended folder locations: <i>C:\RO_PreRenewal\</i>, <i>D:\RO_PreRenewal\</i>, <i>D:\PCGAMES\RO_PreRenewal\</i>, etc.). Refer to <b>SCREENSHOT.png</b> for guidance.</p>
-				<p>3. Extract the files (<b>1_Database.7z</b>, <b>2_Server.7z</b>, <b>3_Client.7z</b>) and place them inside the <b>RO_PreRenewal</b> folder. If you wish to use OpenKore, also extract <b>4_OpenKore.7z</b> into the same folder.</p>
-				<p>4. Copy the three GRF files (<b>data.grf</b>, <b>prerenewal.grf</b>, <b>rdata.grf</b>) from the <b>CLIENT_GRF</b> folder into the <b>3_Client</b> folder.</p>
-				<p>5. Copy the <b>BGM</b> folder (choose between <b>LQ_BGM.7z</b> (Original) and <b>HQ_BGM.7z</b>) into the <b>3_Client</b> folder. <b>NOTE:</b> The high-quality version only includes the pre-renewal tracks; all renewal tracks remain in low quality.</p>
-				<p><b>NOTE:</b> The Prontera Town HQ BGM may have a playback issue at the beginning when played in the game, though it works fine in a music player. To resolve this, I’ve also uploaded a mono version of the BGM, <b>08.mp3</b>.</p>
-				<p>6. Run <b>laragon.exe</b> from the <b>1_Database</b> folder. Laragon will run in the system tray. (If a firewall prompt appears, select <b>Yes</b>.)</p>
-				<p>7. Run <b>runserver.bat</b> from the <b>2_Server</b> folder. This will open four CMD windows: <b>logserv.bat</b>, <b>charserv.bat</b>, <b>webserv.bat</b>, and <b>mapserv.bat</b>. (If a firewall prompt appears, select <b>Yes</b>.)</p>
-				<p>8. Run <b>Ragnarok.exe</b> or <b>Ragnarok_XKore.exe</b> from the <b>3_Client</b> folder (use <b>Ragnarok_XKore.exe</b> if you want to use OpenKore XKore). (If a firewall prompt appears, select <b>Yes</b>.)</p>
-				<p><b>NOTE:</b> For faster loading, it’s recommended to exclude the .exe files or even the entire <b>RO_PreRenewal</b> folder from your antivirus. However, if you're concerned about security, it’s perfectly fine not to follow this recommendation.</p>
-				<p>On my PC, <b>Ragnarok.exe</b> is not detected as a virus by Windows Security, but on another PC, it is. I'm not sure why this happens, but you can exclude <b>Ragnarok.exe</b> from being detected by Windows Security if necessary.</p>
-				<p>If you don’t trust me, I’ve also uploaded <b>WARP</b> with the EXE (<b>2020-05-06aRagexe.exe</b>) and the profile (<b>2020-05-06aRagexe.yml</b>) I used (in the <b>TOOLS</b> folder), so you can diff the client yourself if you prefer.</p>
+				<h4>2. Folder Setup & Extraction</h4>
+				<ol class="file-list">
+					<li><strong>Create Root Folder:</strong> Create a folder named <code>RO_PreRenewal</code> (e.g., <code>C:\RO_PreRenewal\</code>).</li> 
+					<aside class="red">Avoid using spaces in the folder path.</aside>
+					<li><strong>Extract Core Files:</strong> Extract <code>1_Database</code>, <code>2_Server</code>, and <code>3_Client</code> into your <code>RO_PreRenewal</code> folder.</li>
+					<li><strong>Move Assets:</strong> Copy the three <strong>GRF files</strong> into the <code>3_Client</code> folder. Extract your chosen <strong>BGM folder</strong> into the <code>3_Client</code> folder.</li>
+				</ol>
+				<aside class="orange">The Prontera Town HQ BGM may have a playback issue at when played in the game, though it works fine in a music player. To resolve this, I’ve also uploaded a mono version of the BGM, <b>08.mp3</b>.</aside> 
+				<h4>3. Launching the Game</h4>
+				<ol class="file-list">
+					<li><strong>Start Database:</strong> Run <code>laragon.exe</code> from the <code>1_Database</code> folder.</li>
+					<li><strong>Start Server:</strong> Run <code>runserver.bat</code> from the <code>2_Server</code> folder. Keep the four command windows open.</li>
+					<li><strong>Start Game:</strong> Run <code>Ragnarok.exe</code> from the <code>3_Client</code> folder.
+						<br><em>(Use <code>Ragnarok_XKore.exe</code> if you are using OpenKore).</em></li>
+				</ol>
+				<aside class="orange">If prompted by your firewall, select <strong>Allow/Yes</strong> for all components.</aside>
+				<h4>Security & Optimization</h4>
+				<ol class="file-list">
+					<li><strong>Antivirus:</strong> To prevent slow loading or false flags, exclude the <code>RO_PreRenewal</code> folder from your Antivirus/Windows Security.</li>
+					<li><strong>Verification:</strong> If you wish to "diff" the client yourself using <code>WARP</code>, the unpatched EXE <code>2020-05-06a.exe</code> and profile <code>2020-05-06aRagexe.yml</code> are available in the <code>TOOLS</code> folder.</li>
+				</ol>
 			</div>
 			<div id="createuser">
-				<h2>How to Create a New User</h2>
+				<h3>How to Create a New User</h3>
 				<p>1. Open your browser and go to <b><a target="_blank" href="https://localhost">https://localhost</a></b> (make sure to run <b>laragon.exe</b> first).</p>
 				<p>2. Go to <b>Register</b> (You can use a fake email and even the same email for multiple accounts).</p>
 				<p><b>NOTE:</b> If you see a security warning when visiting <b><a target="_blank" href="https://localhost">https://localhost</a></b>, it means the Laragon SSL certificate hasn’t been installed yet.</p>
@@ -285,7 +339,7 @@
 				<p>If all of those still now working, just use <b><a target="_blank" href="http://127.0.0.1">http://127.0.0.1</a></b></p>
 			</div>
 			<div id="gmaccount">
-				<h2>GM Account</h2>
+				<h3>GM Account</h3>
 				<table>
 					<tbody>
 						<tr>
@@ -307,7 +361,7 @@
 				</table>
 			</div>
 			<div id="troubleshooting">
-				<h2>Troubleshooting</h2>
+				<h3>Troubleshooting</h3>
 				<table>
 					<tbody>
 						<tr>
@@ -344,7 +398,7 @@
 		<div class="content" id="info">
 			<h2 class="maintitle">Info</h2>
 			<div id="serverinfo">
-				<h2>Server</h2>
+				<h3>Server</h3>
 				<table>
 					<tbody>
 						<tr>
@@ -374,7 +428,7 @@
 				</table>
 			</div>
 			<div id="clientinfo">
-				<h2>Client</h2>
+				<h3>Client</h3>
 				<table>
 					<tbody>
 						<tr>
@@ -459,7 +513,7 @@
 				</table>
 			</div>
 			<div id="environment">
-				<h2>Environment</h2>
+				<h3>Environment</h3>
 				<table>
 					<tbody>
 						<tr>
@@ -496,7 +550,7 @@
 				</table>
 			</div>
 			<div id="tested">
-				<h2>Tested On</h2>
+				<h3>Tested On</h3>
 				<table>
 					<tbody>
 						<tr>
@@ -524,7 +578,7 @@
 		<div class="content">
 			<h2 class="maintitle">Custom Changes</h2>
 			<div id="generalchanges">
-				<h2>General Changes</h2>
+				<h3>General Changes</h3>
 				<table>
 					<tbody>
 						<tr>
@@ -613,7 +667,7 @@
 
 
 			<div id="skillchanges">
-				<h2>Skill Changes</h2>
+				<h3>Skill Changes</h3>
 				<table>
 					<tbody>
 						<tr>
@@ -707,7 +761,7 @@
 
 
 			<div id="itemchanges">
-				<h2>Item Changes</h2>
+				<h3>Item Changes</h3>
 				<table>
 					<tbody>
 						<tr>
@@ -735,7 +789,7 @@
 
 			
 			<div id="newitems">
-				<h2>New Items</h2>
+				<h3>New Items</h3>
 				<table>
 					<tbody>
 						<tr>
@@ -762,7 +816,7 @@
 
 			
 			<div id="extras">
-				<h2>Extra Notes</h2>
+				<h3>Extra Notes</h3>
 				<div class="listinfo">
 					<ol>
 						<li>- To keep the server organized, I've documented all modified folders and files here.</li>
