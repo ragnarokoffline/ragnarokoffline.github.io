@@ -217,10 +217,10 @@
 		#serverinfo,
 		#clientinfo,
 		#environment,
+		#extras,
 		#generalchanges,
 		#skillchanges,
-		#itemchanges,
-		#newitems {
+		#itemchanges {
 			margin-bottom: 3rem;
 		}
 
@@ -285,7 +285,7 @@
 	<main>
 		<header>
 			<h1>Ragnarok Offline Pre-Renewal Pack</h1>
-			<h2>Latest Update: <span>2026-02-10</span> <a href="#info" title="Server Info">[?]</a></h2>
+			<h2>Latest Update: <span>2026-02-11</span> <a href="#info" title="Server Info">[?]</a></h2>
 		</header>
 
 
@@ -413,12 +413,12 @@
 						</tr>
 						<tr>
 							<td>rAthena</td>
-							<td>2026-02-10</td>
-							<td><a target="_blank" href="https://github.com/rathena/rathena/tree/31f744b5f9dc5cfad6161a6a5ff272f0d531dffd">GitHub</a></td>
+							<td>2026-02-11</td>
+							<td><a target="_blank" href="https://github.com/rathena/rathena/tree/a7cd4456b1586e3bf5cb06515f0a819e0d462c82">GitHub</a></td>
 							<td>
 								<ol>
 									<li>PACKETVER 20200401</li>
-									<li>Compiler: Visual Studio Community 2022 17.14.25 (Release Mode)</li>
+									<li>Compiler: Visual Studio Community 2022 17.14.26 (Release Mode)</li>
 								</ol>
 							</td>
 						</tr>
@@ -565,7 +565,7 @@
 							<th>GPU</th>
 						</tr>
 						<tr>
-							<td>Windows 11 Pro 64-bit 25H2 Build 26200.7705</td>
+							<td>Windows 11 Pro 64-bit 25H2 Build 26200.7840</td>
 							<td>i9-9900k</td>
 							<td>32GB</td>
 							<td>RTX 2070 Super 8GB</td>
@@ -582,6 +582,63 @@
 		-->
 		<div class="content">
 			<h2 class="maintitle">Custom Changes</h2>
+			<div id="extras">
+				<h3>Extra Notes</h3>
+				<div class="listinfo">
+					<ol>
+						<li>- To keep the server organized, I've documented all modified folders and files here.</li>
+						<li>- <b style="color: red;">DO NOT TOUCH THESE FILES/FOLDERS UNLESS YOU KNOW WHAT YOU ARE DOING.</b></li>
+						<li>- This section is for <b>2_Server</b> folder.</li>
+						<li>- These files/folders have been edited to suit this server needs.</li>
+						<li>- You can use Visual Studio Code to compare between the original rAthena files with these files listed below to know the difference.</li>
+						<li>- <b>AVOID</b> editing core files directly. Use the import folders in <b>conf</b> and <b>db</b> to override settings.</li>
+						<li>&nbsp; This keeps your modifications organized and prevents merge conflicts during updates.</li>
+						<li>- If you edit the source, you need to recompile the server to make the changes you've made take effect. Watch <a target="_blank" href="https://youtu.be/DDR_d3Aj2uc">How to Compile rAthena 2026 in Windows 10/11</a></li>
+					</ol>
+				</div>
+				<table>
+					<tbody>
+						<tr>
+							<th>Info</th>
+							<th>Files/Folders</th>
+						</tr>
+						<tr>
+							<td rowspan="3">Source settings</td>
+							<td>src\common\mmo.hpp</td>
+						</tr>
+						<tr><td>src\custom\defines_pre.hpp</td></tr>
+						<tr><td>src\custom\defines_post.hpp</td></tr>
+						<tr>
+							<td>Server configuration</td>
+							<td>conf\import\~</td>
+						</tr>
+						<tr>
+							<td>Server Database</td>
+							<td>db\import\~</td>
+						</tr>
+						<tr>
+							<td rowspan="3">Custom NPC</td>
+							<td>npc\custom\aegis\~</td>
+						</tr>
+						<tr><td>npc\barters.yml</td></tr>
+						<tr><td>npc\scripts_custom.conf</td></tr>
+						<tr>
+							<td rowspan="3">Custom Maps</td>
+							<td>npc\custom\aegis\map\mapflags.txt</td>
+						</tr>
+						<tr><td>npc\custom\aegis\map\mobs.txt</td></tr>
+						<tr><td>npc\custom\aegis\map\warppoints.txt</td></tr>
+						<tr>
+							<td rowspan="2">FluxCP database</td>
+							<td>sql-files\~</td>
+						</tr>
+						<tr><td>Use <b>yaml2sql.bat</b> then run sql file to re-generate sql files in <b>sql</b> folder if you want to update FluxCP database</td></tr>
+					</tbody>
+				</table>
+			</div>
+
+
+
 			<div id="generalchanges">
 				<h3>General Changes</h3>
 				<table>
@@ -815,63 +872,6 @@
 						<tr><td>Stone Bundle (Containing 500 Ninja elemental stone)</td></tr>
 						<tr><td>Costume Backpack (Garment). <b>Effect</b>: Increase maximum weight +1000</td></tr>
 						<tr><td>800++ Custome Headgear (Top, Mid, Low)</td></tr>
-					</tbody>
-				</table>
-			</div>
-
-
-			
-			<div id="extras">
-				<h3>Extra Notes</h3>
-				<div class="listinfo">
-					<ol>
-						<li>- To keep the server organized, I've documented all modified folders and files here.</li>
-						<li>- <b style="color: red;">DO NOT TOUCH THESE FILES/FOLDERS UNLESS YOU KNOW WHAT YOU ARE DOING.</b></li>
-						<li>- This section is for <b>2_Server</b> folder.</li>
-						<li>- These files/folders have been edited to suit this server needs.</li>
-						<li>- You can use Visual Studio Code to compare between the original rAthena files with these files listed below to know the difference.</li>
-						<li>- <b>AVOID</b> editing core files directly. Use the import folders in <b>conf</b> and <b>db</b> to override settings.</li>
-						<li>&nbsp; This keeps your modifications organized and prevents merge conflicts during updates.</li>
-						<li>- If you edit the source, you need to recompile the server to make the changes you've made take effect.</li>
-					</ol>
-				</div>
-				<table>
-					<tbody>
-						<tr>
-							<th>Info</th>
-							<th>Files/Folders</th>
-						</tr>
-						<tr>
-							<td rowspan="3">Source settings</td>
-							<td>src\common\mmo.hpp</td>
-						</tr>
-						<tr><td>src\custom\defines_pre.hpp</td></tr>
-						<tr><td>src\custom\defines_post.hpp</td></tr>
-						<tr>
-							<td>Server configuration</td>
-							<td>conf\import\~</td>
-						</tr>
-						<tr>
-							<td>Server Database</td>
-							<td>db\import\~</td>
-						</tr>
-						<tr>
-							<td rowspan="3">Custom NPC</td>
-							<td>npc\custom\aegis\~</td>
-						</tr>
-						<tr><td>npc\barters.yml</td></tr>
-						<tr><td>npc\scripts_custom.conf</td></tr>
-						<tr>
-							<td rowspan="3">Custom Maps</td>
-							<td>npc\custom\aegis\map\mapflags.txt</td>
-						</tr>
-						<tr><td>npc\custom\aegis\map\mobs.txt</td></tr>
-						<tr><td>npc\custom\aegis\map\warppoints.txt</td></tr>
-						<tr>
-							<td rowspan="2">FluxCP database</td>
-							<td>sql-files\~</td>
-						</tr>
-						<tr><td>Use <b>yaml2sql.bat</b> then run sql file to re-generate sql files in <b>sql</b> folder if you want to update FluxCP database</td></tr>
 					</tbody>
 				</table>
 			</div>
