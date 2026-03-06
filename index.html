@@ -204,8 +204,8 @@
 		}
 
 		code {
-			background-color: #5467e6;
-			border-radius: 3px;
+			background-color: #2a3477;
+			border-radius: 2px;
 			color: #f0f0f0;
 			font-family: "Courier New", Courier, monospace;
 			padding: .25rem .375rem .125rem;
@@ -285,7 +285,7 @@
 	<main>
 		<header>
 			<h1>Ragnarok Offline Pre-Renewal Pack</h1>
-			<h2>Latest Update: <span>2026-03-04</span> <a href="#info" title="Server Info">[?]</a></h2>
+			<h2>Latest Update: <span>2026-03-06</span> <a href="#info" title="Server Info">[?]</a></h2>
 		</header>
 
 
@@ -301,8 +301,8 @@
 				<h4>1. Download Requirements</h4>
 				<ol class="file-list">
 					<li><strong>Core Files:</strong> <code>1_Database.7z</code>, <code>2_Server.7z</code>, and <code>3_Client.7z</code>.</li>
-					<li><strong>GRF Files:</strong> <code>data.grf</code>, <code>prerenewal.grf</code>, and <code>rdata.grf</code> (found in <code>CLIENT_GRF</code>).</li>
-					<li><strong>Audio:</strong> Choose <code>LQ_BGM.7z</code> (Standard) or <code>HQ_BGM.7z</code> (High Quality).</li>
+					<li><strong>GRF Files:</strong> <code>data.grf</code>, <code>prerenewal.grf</code>, and <code>rdata.grf</code> (Inside <code>CLIENT_GRF</code> folder).</li>
+					<li><strong>Audio:</strong> Choose between <code>LQ_BGM.7z</code> (Standard) and <code>HQ_BGM.7z</code> (High Quality).</li>
 					<li><strong>Optional:</strong> <code>4_OpenKore.7z</code> (for botting) and <code>flatmap.grf</code> (simplified maps).</li>
 				</ol>
 				<aside class="red">Download the following files individually. Do not download the entire folder as a single ZIP.</aside>
@@ -377,17 +377,23 @@
 						</tr>
 						<tr>
 							<td rowspan="3">Ragnarok.exe won't run</td>
-							<td>Download all the GRF files one by one, <b>DO NOT</b> download all at once.<br> If you download the GRF files as a ZIP, it means you did it wrong. <b>LEARN TO READ!</b></td>
+							<td>Download all the GRF files one by one, <b>DO NOT</b> download all at once.<br> If you download the GRF files as a ZIP, it means you did it wrong. <b>RE-READ AGAIN</b></td>
 						</tr>
 						<tr>
-							<td>Try to run <b>opensetup.exe</b> for the first time, and change resolution in graphic setting section and use <b>DirectX 7</b> graphics API</td>
+							<td>Run <b>opensetup.exe</b> for the first time, and change resolution in graphic setting section and use <b>DirectX 7</b> graphics API</td>
 						</tr>
 						<tr>
-							<td>Install this <a target="_blank" href="https://www.techpowerup.com/download/visual-c-redistributable-runtime-package-all-in-one/">Visual C++ Redistributable Runtimes All-in-One</a> (This also applied if you can't run the server because missing <b>MSVCR110</b>)</td>
+							<td>Install <a target="_blank" href="https://www.techpowerup.com/download/visual-c-redistributable-runtime-package-all-in-one/">Visual C++ Redistributable Runtimes All-in-One</a> (This also applied if you can't run the server because missing <b>MSVCR110</b>)</td>
 						</tr>
 						<tr>
-							<td>Client runs poorly (low fps or stutter)</td>
+							<td rowspan="3">Client runs poorly (low fps or stutter)</td>
 							<td>Change power plans to <b>High Performance</b> in Windows Control Panel to make CPU clock speed stable.</td>
+						</tr>
+						<tr>
+							<td>Open <b>opensetup.exe</b> &raquo; Turn on <b>Restrict mouse to window</b></td>
+						</tr>
+						<tr>
+							<td>Right click <b>Ragnarok.exe</b> &raquo; <b>Properties</b> &raquo; <b>Compability</b> &raquo; Turn on <b>Disable fullscreen optimizations</b></td>
 						</tr>
 					</tbody>
 				</table>
@@ -413,8 +419,8 @@
 						</tr>
 						<tr>
 							<td>rAthena</td>
-							<td>2026-03-04</td>
-							<td><a target="_blank" href="https://github.com/rathena/rathena/tree/a10f2e34c0e11ce89381ccc4368b3a100c922267">GitHub</a></td>
+							<td>2026-03-06</td>
+							<td><a target="_blank" href="https://github.com/rathena/rathena/tree/2aaff2511703abf15b552b0e311babb7780de36b">GitHub</a></td>
 							<td>
 								<ol>
 									<li>PACKETVER 20200401</li>
@@ -496,7 +502,7 @@
 						<tr>
 							<td rowspan="2">OpenKore</td>
 							<td rowspan="2">2026-03-04</td>
-							<td rowspan="2"><a target="_blank" href="https://github.com/OpenKore/openkore/tree/5b45e6419221cfebedda6c6a4f610e0f713b9098">GitHub</a></td>
+							<td rowspan="2"><a target="_blank" href="https://github.com/OpenKore/openkore/tree/e137c3f643b8b07f63d7475766dc00fd76b642c1">GitHub</a></td>
 							<td>
 								<ol>
 									<li>This program is used for Botting/Auto-Farm.</li>
