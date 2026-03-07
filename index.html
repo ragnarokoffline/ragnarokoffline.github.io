@@ -599,7 +599,7 @@
 						<li>- You can use Visual Studio Code to compare between the original rAthena files with these files listed below to know the difference.</li>
 						<li>- <b>AVOID</b> editing core files directly. Use the import folders in <b>conf</b> and <b>db</b> to override settings.</li>
 						<li>&nbsp; This keeps your modifications organized and prevents merge conflicts during updates.</li>
-						<li>- If you edit the source, you need to recompile the server to make the changes you've made take effect. Watch <a target="_blank" href="https://youtu.be/DDR_d3Aj2uc">How to Compile rAthena 2026 in Windows 10/11</a></li>
+						<li>- If you edit the source, you need to recompile the server to make the changes you've made take effect. Watch <a target="_blank" href="https://youtu.be/DDR_d3Aj2uc">How to Compile rAthena 2026 in Windows 10/11</a>.</li>
 					</ol>
 				</div>
 				<table>
@@ -635,10 +635,11 @@
 						<tr><td>npc\custom\aegis\map\mobs.txt</td></tr>
 						<tr><td>npc\custom\aegis\map\warppoints.txt</td></tr>
 						<tr>
-							<td rowspan="2">FluxCP database</td>
+							<td rowspan="3">FluxCP database</td>
 							<td>sql-files\~</td>
 						</tr>
-						<tr><td>Use <b>yaml2sql.bat</b> then run sql file to re-generate sql files in <b>sql</b> folder if you want to update FluxCP database</td></tr>
+						<tr><td>Use <b>yaml2sql.bat</b> then run sql file to re-generate sql files in <b>sql-files</b> folder if you want to update FluxCP database.</td></tr>
+						<tr><td>Since <b>yaml2sql.bat</b> doesn't convert <b>mob_skill_db.txt</b> to <b>SQL</b>, you can use <b>.convertmobskilltxt2sql.bat</b>. Don't forget to install <a target="_blank" href="https://strawberryperl.com/">Perl for Windows</a> beforehand.</td></tr>
 					</tbody>
 				</table>
 			</div>
@@ -814,15 +815,15 @@
 							<td rowspan="11">db\import\item_db.yml</td>
 						</tr>
 						<tr><td>Reduce all arrow weight to 0.1</td></tr>
+						<tr><td>Reduce trap price to 50z</td></tr>
 						<tr><td>Reduce trap weight to 0.2</td></tr>
 						<tr><td>Reduce all shuriken weight to 0.1</td></tr>
 						<tr><td>Reduce all kunai weight to 0.1</td></tr>
 						<tr><td>Reduce all Ninja elemental stone weight to 0.1</td></tr>
 						<tr><td>Reduce all shuriken, kunai, and Ninja elemental stone price by half</td></tr>
 						<tr><td>Reduce all ammo weight to 0.1</td></tr>
-						<tr><td>Increase Bullet attack to 25</td></tr>
-						<tr><td>Reduce Silver Bullet and Bloody Shell price to 3z</td></tr>
-						<tr><td>Reduce all grenade price by half</td></tr>
+						<tr><td>Reduce Silver Bullet and Bloody Shell price to 5z</td></tr>
+						<tr><td>Reduce all grenade price to 40z</td></tr>
 					</tbody>
 				</table>
 			</div>
@@ -846,7 +847,7 @@
 						<tr><td>Flare, Lightning, Ice, Poison, and Blinding Bullet (Price: 10z)</td></tr>
 						<tr><td>Armor-Piercing, Blazing, Freezing, Lightning, Magic Stone, and Purifying Bullet (Price: 20z)</td></tr>
 						<tr><td>New Bullet Case (Containing 500 Bullet)</td></tr>
-						<tr><td>Formless, Shadow, and Hamaya Kunai (Price: 5z)</td></tr>
+						<tr><td>Formless, Shadow, and Hamaya Kunai (Price: 10z)</td></tr>
 						<tr><td>Kunai Scroll (Containing 500 Kunai)</td></tr>
 						<tr><td>Stone Bundle (Containing 500 Ninja elemental stones)</td></tr>
 						<tr><td>Costume Backpack (Garment). <b>Effect</b>: Increase maximum weight +1000</td></tr>
